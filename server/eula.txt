@@ -1,0 +1,3 @@
+# Read the Minecraft EULA before changing this file:
+# https://aka.ms/MinecraftEULA
+eula=false

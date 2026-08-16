@@ -1,0 +1,25 @@
+[Unit]
+Description=Minecraft Paper Server
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=minecraft
+Group=minecraft
+WorkingDirectory=/opt/minecraft/paper/server
+EnvironmentFile=-/etc/minecraft-paper.env
+ExecStart=/usr/bin/env bash -lc 'exec "${JAVA_BIN:-java}" -Xms"${MINECRAFT_HEAP_MIN:-1G}" -Xmx"${MINECRAFT_HEAP_MAX:-6G}" -jar "${PAPER_JAR:-paper.jar}" --nogui'
+Restart=on-failure
+RestartSec=15
+SuccessExitStatus=0 143
+TimeoutStopSec=120
+LimitNOFILE=100000
+StandardInput=null
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=full
+ReadWritePaths=/opt/minecraft/paper
+
+[Install]
+WantedBy=multi-user.target

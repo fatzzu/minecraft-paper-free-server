@@ -1,0 +1,30 @@
+# Runtime downloads
+server/*.jar
+server/.paper-version
+
+# Minecraft generated state
+server/cache/
+server/config/
+server/crash-reports/
+server/libraries/
+server/logs/
+server/versions/
+server/world/
+server/world_nether/
+server/world_the_end/
+server/banned-ips.json
+server/banned-players.json
+server/usercache.json
+
+# Plugins: keep the folder, avoid committing plugin binaries by accident
+server/plugins/*.jar
+!server/plugins/.gitkeep
+
+# Local secrets and backups
+.env
+*.env
+*.key
+*.pem
+*.ppk
+*.tar.gz
+backups/
