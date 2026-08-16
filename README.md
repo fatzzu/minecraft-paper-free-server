@@ -29,6 +29,12 @@ Verificat pe 2026-08-16:
 - `systemd/minecraft-paper.service` - ruleaza serverul ca serviciu Linux.
 - `docs/` - pasi pentru GitHub, Oracle Cloud, Aternos si securitate.
 
+## Important despre repo privat
+
+Repository-ul poate ramane privat, dar pe Oracle comanda `git clone` va cere
+login GitHub sau token. Pentru varianta cea mai simpla, fa repository-ul public
+inainte de instalare. Nu am pus parole, chei SSH sau date sensibile in repo.
+
 ## Start rapid pe Oracle Cloud
 
 1. Creeaza un repository GitHub gol, de exemplu
